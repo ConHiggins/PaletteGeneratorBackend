@@ -58,6 +58,10 @@ public class PaletteService {
         return true;
     }
 
+    public void deleteAll(){
+        paletteRepository.deleteAll();
+    }
+
     public int deletePalettesCreatedBy(String createdBy) {
         int deletedCount = paletteRepository.deletePalettesByCreator(createdBy);
         return deletedCount;
