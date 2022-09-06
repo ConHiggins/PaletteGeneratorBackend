@@ -13,7 +13,7 @@ public class Palette {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
+    private String name;
     private String createdBy;
     private Timestamp dateCreated;
     protected Color[] colours;
@@ -22,8 +22,9 @@ public class Palette {
 
     public Palette(){
     }
-    public Palette(int id, String createdBy, List<String> coloursHex) {
+    public Palette(int id, String name, List<String> coloursHex, String createdBy) {
         this.id = id;
+        this.name = name;
         this.coloursHex = coloursHex;
         this.createdBy = createdBy;
         this.dateCreated = new Timestamp(new Date().getTime());
@@ -49,5 +50,9 @@ public class Palette {
 
     public List<String> getColoursHex() {
         return coloursHex;
+    }
+
+    public String getName() {
+        return name;
     }
 }

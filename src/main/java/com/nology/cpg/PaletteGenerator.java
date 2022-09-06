@@ -34,13 +34,13 @@ public class PaletteGenerator {
             }
             else if(rgb.equals("g")) {
                 g = (g + base.getGreen()) / 2;
-                r = r/2;
-                b = b/2;
+                r *= 0.25;
+                b *= 0.4;
             }
             else {
                 b = (b + base.getBlue()) /2;
-                r = r/2;
-                g = g/2;
+                r *= 0.2;
+                g *= 0.4;
             }
 
         }
