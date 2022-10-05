@@ -1,6 +1,7 @@
 package com.nology.cpg;
 
 import java.awt.*;
+import java.util.Arrays;
 import java.util.Random;
 
 public class PaletteGenerator {
@@ -84,8 +85,4 @@ public class PaletteGenerator {
         Palette p = new Palette(palette);
         return p;
     }
-
-
-
-
 }
